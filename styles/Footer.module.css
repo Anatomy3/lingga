@@ -1,18 +1,22 @@
 .contactContainer {
-  background-color: #ffffff; /* Warna latar belakang putih */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(173, 216, 230, 0.5) 50%, rgba(255, 182, 193, 0.5) 100%);
   padding: 20px;
   position: relative;
 }
 
 .footer {
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  width: 100%; /* Lebar footer 100% dari parent container */
+  margin: 0 auto; /* Pastikan footer berada di tengah */
+  box-sizing: border-box;
+  max-width: 1200px; /* Maksimal lebar footer agar tidak terlalu melebar di layar besar */
 }
 
 .logo {
-  margin-left: 60px; /* Menyesuaikan jarak tulisan VIGIO */
+  margin-left: 0; /* Hapus margin kiri yang berlebih */
 }
 
 .logo span {
@@ -25,20 +29,50 @@
   color: #000000; /* Warna teks hitam */
   font-size: 14px;
   margin: 0;
+  text-align: center; /* Pusatkan teks copyright */
+  flex: 1; /* Biarkan teks copyright mengambil ruang yang dibutuhkan */
+  white-space: nowrap; /* Pastikan teks tidak terputus menjadi beberapa baris */
 }
 
-.socialIcons {
-  display: flex;
-  gap: 20px;
-  margin-right: 60px; /* Menyesuaikan jarak icon media sosial */
+.youtubeIcon {
+  width: 108px; /* Ukuran lebar ikon YouTube diperbesar */
+  height: auto;
+  transition: transform 0.3s ease;
 }
 
-.socialIcons a {
-  color: #000000; /* Warna icon media sosial hitam */
-  font-size: 24px; /* Ukuran icon */
-  transition: color 0.3s ease;
+.youtubeIcon:hover {
+  transform: scale(1.1); /* Efek zoom saat di-hover */
 }
 
-.socialIcons a:hover {
-  color: #555555; /* Warna icon saat hover */
+/* Media Query untuk Mode Mobile */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: row; /* Susun komponen secara horizontal */
+    align-items: center; /* Pusatkan semua elemen secara vertikal */
+    justify-content: center; /* Pusatkan teks copyright di tengah */
+    padding: 10px 0; /* Kurangi padding atas dan bawah */
+    margin-top: 40px; /* Menambahkan jarak di atas footer */
+    margin-bottom: 80px; /* Menambahkan jarak di bawah footer untuk memastikan berada di atas sidebar */
+    width: 100%; /* Pastikan footer mengisi lebar penuh layar */
+    max-width: 100%; /* Pastikan tidak ada kelebihan lebar di kanan */
+  }
+
+  .logo {
+    display: none; /* Sembunyikan logo "VIGIO" */
+  }
+
+  .socialIcons {
+    display: none; /* Sembunyikan ikon media sosial */
+  }
+
+  .footer p {
+    font-size: 12px; /* Perkecil ukuran font untuk teks copyright */
+    text-align: center; /* Pusatkan teks copyright */
+    flex: 1; /* Biarkan teks copyright mengambil ruang yang dibutuhkan */
+    white-space: nowrap; /* Pastikan teks tidak terputus menjadi beberapa baris */
+  }
+
+  .youtubeIcon {
+    width: 90px; /* Ukuran ikon YouTube untuk mobile */
+  }
 }
