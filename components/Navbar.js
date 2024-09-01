@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div className={styles.navbar}>
       <div className={styles.leftSection}>
-        <span className={styles.latestTrades}>INFORMASI</span>
+        <span className={styles.latestTrades}>PORTOFOLIO WEBSITE</span>
       </div>
       <div className={`${styles.tradeDetails} ${styles.marquee}`}>
         <div className={styles.marqueeContent}>
