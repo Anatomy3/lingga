@@ -1,0 +1,165 @@
+.projectsContainer {
+  margin-top: 20px; /* Menambahkan jarak di atas halaman */
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(173, 216, 230, 0.5) 50%, rgba(255, 182, 193, 0.5) 100%);
+  display: flex;
+  flex-direction: column; /* Mengatur tata letak agar elemen tersusun vertikal */
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.buttonsContainer {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  z-index: 1000;
+}
+
+.categoryButton {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.categoryButton:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.active {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.toolsBox {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.iconColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.toolsBox .iconColumn:first-child {
+  margin-right: 20px;
+}
+
+.toolsBox img {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0;
+}
+
+.contentWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 50%; /* Memberikan space agar grid bisa di bawah */
+}
+
+.arrowButton {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.arrowButton:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.mainCard {
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 20px;
+  width: 50%;
+  height: 100%; /* Full height untuk konten utama */
+  position: relative;
+}
+
+/* Gaya untuk gambar utama */
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Gaya untuk video utama */
+.mainVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Grid untuk kartu kecil */
+.smallCardsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Lima kolom */
+  gap: 10px;
+  width: 100%;
+  max-width: 800px; /* Lebar maksimum untuk grid */
+  margin-top: 20px; /* Jarak dari konten utama di atasnya */
+  justify-content: center; /* Memastikan grid berada di tengah bawah */
+}
+
+/* Gaya untuk kartu kecil */
+.smallCard {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  height: 100px;
+}
+
+.smallCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.smallCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Gaya untuk video kecil di kartu */
+.cardVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.smallCard.active {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

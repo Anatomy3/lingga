@@ -1,0 +1,157 @@
+.profileWrapper {
+  position: absolute;
+  top: 360%; /* Menggeser profil lebih ke bawah, sesuaikan nilai ini jika diperlukan */
+  left: 200px; /* Jarak dari tepi kiri */
+  transform: translateY(-50%); /* Pusatkan secara vertikal */
+  z-index: 1000;
+  width: 300px;
+  max-width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.imageContainer {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  padding: 20px;
+}
+
+.profileName {
+  font-size: 26px;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.jobTitle {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ceac23;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.description {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #9e9e9e;
+}
+
+.socialLinks {
+  width: 100%;
+  display: flex;
+  height: 65px;
+  border-top: 1px solid #cfcfcf;
+}
+
+.socialLinks > a {
+  flex: 1;
+  font-size: 20px;
+  padding-block: 20px;
+  color: var(--color);
+  text-decoration: none;
+}
+
+.socialLinks .instagram {
+  --color: #ee5487;
+}
+
+.socialLinks .whatsapp {
+  --color: #25D366;
+}
+
+.socialLinks .gmail {
+  --color: #D44638;
+}
+
+.socialLinks > a:nth-child(2) {
+  outline: 1px solid #cfcfcf;
+}
+
+.socialLinks > a:hover {
+  background-color: var(--color);
+}
+
+.socialLinks > a:hover > i {
+  color: white;
+}
+
+/* Media query untuk layar yang lebih kecil */
+@media (max-width: 768px) {
+  .profileWrapper {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 90%; /* Lebar lebih kecil untuk mobile */
+    margin: 20px auto; /* Tambahkan margin untuk memberikan ruang di sekitar profil */
+    box-shadow: none; /* Hapus atau atur ulang bayangan jika diperlukan */
+  }
+
+  .imageContainer {
+    height: 200px; /* Kurangi tinggi gambar untuk layar kecil */
+  }
+
+  .profileName {
+    font-size: 20px; /* Kurangi ukuran font */
+  }
+
+  .jobTitle {
+    font-size: 10px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .socialLinks {
+    height: 50px; /* Kurangi tinggi untuk mobile */
+  }
+
+  .socialLinks > a {
+    font-size: 16px; /* Kurangi ukuran icon media sosial */
+  }
+}
+
+/* Media query untuk layar yang sangat kecil (seperti ponsel kecil) */
+@media (max-width: 480px) {
+  .profileWrapper {
+    width: 95%; /* Lebar profil lebih kecil untuk perangkat yang lebih kecil */
+    top: 80px; /* Posisi vertikal disesuaikan */
+  }
+
+  .imageContainer {
+    height: 150px; /* Tinggi gambar profil lebih kecil */
+  }
+
+  .profileName {
+    font-size: 18px; /* Ukuran font lebih kecil */
+  }
+
+  .jobTitle {
+    font-size: 9px;
+  }
+
+  .description {
+    font-size: 11px;
+  }
+
+  .socialLinks > a {
+    font-size: 14px; /* Ukuran icon media sosial lebih kecil */
+  }
+}

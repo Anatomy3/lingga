@@ -1,0 +1,229 @@
+.projects1Container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(173, 216, 230, 0.5) 50%, rgba(255, 255, 255, 0.5) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  padding-bottom: 20px; /* Menambahkan lebih banyak ruang di bawah halaman agar tidak bertabrakan */
+}
+
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 20px;
+}
+
+.iconButton {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.iconButton:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.icon {
+  color: #1C1C1C; /* Mengubah warna ikon menjadi matte black */
+  font-size: 20px;
+}
+
+.contentWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px;
+  padding-left: 0; /* Menghilangkan padding kiri untuk menggeser lebih ke kiri */
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  margin-left: -110px; /* Menggeser kartu lebih ke kiri */
+}
+
+.glassCard {
+  border-radius: 15px;
+  padding: 20px;
+  border: none; /* Menghilangkan border */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  color: #FFFFFF; /* Warna teks putih */
+  width: 240px;
+  min-height: 280px; /* Mengurangi tinggi minimum kartu sedikit lagi pada mode desktop */
+  text-align: left; /* Menambahkan ini agar teks rata kiri */
+  font-family: Arial, sans-serif; /* Pastikan menggunakan font sans-serif */
+}
+
+.glassCard.card1 {
+  background-color: #333333; /* Warna latar belakang abu-abu gelap untuk Card 1 */
+}
+
+.glassCard.card2 {
+  background-color: #5961C7; /* Warna latar belakang biru untuk Card 2 */
+}
+
+.glassCard h3 {
+  font-size: 24px; /* Ukuran font untuk judul */
+  font-weight: bold; /* Membuat teks judul lebih tebal */
+  margin-bottom: 10px; /* Memberi jarak di bawah judul */
+}
+
+.glassCard p {
+  font-size: 16px; /* Ukuran font untuk paragraf */
+  line-height: 1.5; /* Menambah ruang antara baris teks */
+}
+
+.videoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Memastikan videoWrapper mengambil lebar penuh */
+  height: 100vh; /* Membuat videoWrapper mengambil tinggi penuh dari viewport */
+  max-width: 100%; /* Menjaga proporsi video */
+  margin: 0; /* Menghilangkan margin */
+}
+
+.video {
+  width: 90%; /* Lebar default untuk video */
+  height: auto;
+  max-width: 90%; /* Menjaga proporsi video agar tidak terlalu besar */
+  max-height: 90vh; /* Menjaga tinggi video agar proporsional */
+  object-fit: cover;
+}
+
+.smallVideo {
+  width: 100%; /* Mengatur lebar video menjadi setengah dari lebar kontainer */
+  max-width: 30%; /* Memastikan ukuran maksimal tetap setengah */
+  height: auto; /* Menjaga proporsi tinggi video */
+  max-height: 75vh; /* Memperbesar tinggi video menjadi 75% dari tinggi viewport */
+}
+
+.glassBox {
+  position: absolute;
+  top: 70px; /* Menggeser ikon lebih ke atas */
+  right: 20px;
+  width: auto;
+  height: auto;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glassBox .icon {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0;
+}
+
+/* Media query untuk mode mobile */
+@media (max-width: 768px) {
+  .projects1Container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .contentWrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-left: 0;
+    order: 2;
+  }
+
+  .videoWrapper {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px; /* Geser video lebih ke bawah dengan margin */
+    height: auto;
+    order: 1;
+  }
+
+  .video {
+    width: 90%;
+    max-width: 90%;
+  }
+
+  .smallVideo {
+    width: 45%; /* Mengatur lebar video menjadi setengah dari ukuran normal */
+    max-width: 45%; /* Memastikan ukuran maksimal tetap setengah */
+    height: auto; /* Mempertahankan proporsi tinggi */
+    max-height: 45vh; /* Mengatur tinggi video agar tetap proporsional */
+    margin-top: 20px; /* Menggeser video lebih ke bawah */
+  }
+
+  .cardContainer {
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-bottom: 10px;
+    margin-left: 0;
+    order: 2;
+    width: 100%;
+  }
+
+  .glassCard {
+    flex: 1;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .glassCard h3 {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .glassCard p {
+    font-size: 12px;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  .glassBox {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%); /* Memastikan ikon berada di tengah */
+    flex-direction: row;
+    width: auto;
+    height: 50px;
+    justify-content: center;
+  }
+
+  .glassBox .icon {
+    width: 20px;
+    height: 20px;
+    margin: 0 8px;
+  }
+}

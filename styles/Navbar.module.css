@@ -1,0 +1,77 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 0;
+  height: 48px;
+  position: fixed;
+  top: 0;
+  left: 72px;
+  width: calc(100% - 72px);
+  z-index: 1001;
+  color: white;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.leftSection {
+  background-color: #5961C7;
+  padding: 0 15px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.latestTrades {
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.tradeDetails {
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+  padding-left: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.arrowButton {
+  background-color: #E0E0E0;
+  border: none;
+  color: #666;
+  font-size: 18px;
+  width: 48px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 0;
+  border-left: 1px solid #CCC;
+}
+
+.arrowButton:first-child {
+  border-left: none;
+}
+
+.arrowButton:hover {
+  background-color: #D3D3D3;
+}
+
+/* Media query untuk layar kecil atau mode mobile */
+@media (max-width: 768px) {
+  .navbar {
+    display: none; /* Menyembunyikan navbar saat mode mobile */
+  }
+}

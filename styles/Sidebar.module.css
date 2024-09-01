@@ -1,0 +1,121 @@
+.sidebar {
+  width: 72px;
+  height: 100vh;
+  background-color: #F1F3F4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000; /* Tingkatkan nilai z-index untuk memastikan sidebar berada di depan */
+  overflow: hidden;
+}
+
+.iconContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.iconWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0; /* Spasi antar ikon */
+}
+
+.icon {
+  font-size: 24px;
+  color: #202124;
+  transition: background-color 0.2s ease;
+  margin-bottom: 5px; /* Spasi antara ikon dan teks */
+}
+
+.icon:hover {
+  background-color: #E8EAED;
+  border-radius: 50%;
+}
+
+.text {
+  font-size: 12px;
+  color: #202124;
+  text-align: center; /* Pusatkan teks di bawah ikon */
+}
+
+/* Media query untuk layar kecil atau mode mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 90vw; /* Lebar dikurangi menjadi 90% dari lebar layar */
+    height: 60px; /* Tinggi dikurangi untuk mengurangi ukurannya */
+    top: auto; /* Hapus top */
+    bottom: 20px; /* Jarak dari bawah layar */
+    left: 50%; /* Posisi awal di tengah layar */
+    transform: translateX(-50%); /* Pindahkan sidebar ke tengah secara horizontal */
+    flex-direction: row; /* Ikon berjajar secara horizontal */
+    justify-content: space-around; /* Sebar ikon secara merata */
+    z-index: 10000; /* Pastikan sidebar juga di depan di mode mobile */
+    background-color: #ffffff; /* Warna latar belakang putih */
+    border-radius: 15px; /* Membuat sudut melengkung */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan untuk memberikan efek mengambang */
+    padding: 0 10px; /* Mengurangi padding di sisi kiri dan kanan */
+  }
+
+  .iconContainer {
+    flex-direction: row; /* Ikon berjajar secara horizontal */
+    align-items: center;
+    justify-content: space-between; /* Sebar ikon secara merata */
+    width: 100%;
+  }
+
+  .iconWrapper {
+    flex-direction: column; /* Ikon dan teks tetap vertikal */
+    margin: 0; /* Hapus margin vertikal */
+    text-align: center; /* Pusatkan ikon dan teks */
+    flex: 1; /* Membuat setiap ikon mengisi ruang yang sama */
+    padding: 5px 0; /* Mengurangi padding vertikal untuk memperkecil ukuran */
+    color: #202124; /* Warna ikon dan teks matte black */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transisi yang mulus saat perubahan warna */
+    background-color: transparent; /* Pastikan latar belakang awal transparan */
+  }
+
+  .icon {
+    font-size: 20px; /* Sedikit kurangi ukuran ikon */
+    color: inherit; /* Warna ikon mengikuti warna elemen induknya */
+    margin-bottom: 3px; /* Mengurangi spasi antara ikon dan teks */
+    background-color: transparent; /* Pastikan latar belakang ikon transparan */
+  }
+
+  .text {
+    font-size: 9px; /* Ukuran font lebih kecil untuk mode mobile */
+    margin-top: 3px; /* Beri jarak sedikit antara ikon dan teks */
+    color: inherit; /* Warna teks mengikuti warna elemen induknya */
+  }
+
+  .iconWrapper:hover,
+  .iconWrapper:focus,
+  .iconWrapper:active {
+    background-color: #5961C7; /* Latar belakang biru saat di hover atau diklik */
+    color: #ffffff; /* Warna teks dan ikon berubah menjadi putih */
+    border-radius: 10px; /* Membuat sudut melengkung saat diklik */
+  }
+
+  .iconWrapper:hover .icon,
+  .iconWrapper:focus .icon,
+  .iconWrapper:active .icon {
+    background-color: transparent; /* Pastikan ikon tetap tanpa latar belakang putih */
+    color: #ffffff; /* Ubah warna ikon menjadi putih */
+  }
+
+  .iconWrapper:hover .text,
+  .iconWrapper:focus .text,
+  .iconWrapper:active .text {
+    color: #ffffff; /* Ubah warna teks menjadi putih */
+  }
+}

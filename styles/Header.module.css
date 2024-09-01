@@ -1,0 +1,263 @@
+.header {
+  position: relative;
+  background-color: #ffffff;
+  padding: 20px;
+  height: 100vh;
+  width: 97%;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.imageContainer {
+  position: absolute;
+  overflow: hidden;
+}
+
+.image1 {
+  top: -10px;
+  left: 0px;
+  width: 69%;
+  height: 60%;
+  z-index: 5;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image2 {
+  top: -10px;
+  right: 0;
+  width: 30%;
+  height: 50%;
+  z-index: 5;
+  background-color: #ff4500; /* Warna latar belakang */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textOverlayGallery {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #ffffff;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.textOverlayGallery h1 {
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: bold;
+  background: -webkit-linear-gradient(#ffffff, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.textOverlayGallery p {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+/* Gaya untuk Gambar 3 */
+.image3 {
+  bottom: 0px;
+  left: 0px;
+  width: 34%;
+  height: 40%;
+  z-index: 5;
+  background-color: #1c1c1c; /* Warna latar belakang */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textOverlayRevolution {
+  text-align: left;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  padding: 20px;
+}
+
+.textOverlayRevolution h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.textOverlayRevolution p {
+  color: #cccccc;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Gambar 4 sekarang menampilkan gambar dari public */
+.image4 {
+  bottom: 0px;
+  right: 31%;
+  width: 34%;
+  height: 40%;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.image5 {
+  top: 50%;
+  right: 0;
+  width: 30%;
+  height: 50%;
+  z-index: 5;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.textOverlay {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  color: white;
+  padding: 0;
+  text-align: left;
+  z-index: 7;
+}
+
+.textOverlay h1 {
+  font-size: 2.5em;
+  line-height: 1.2;
+  font-weight: bold;
+  margin: 0;
+}
+
+.textOverlay p {
+  font-size: 1.1em;
+  margin: 10px 0 0 0;
+}
+
+.image1::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)); /* Efek gelap */
+  z-index: 6;
+}
+
+/* Untuk memusatkan header di layar mobile */
+@media (max-width: 768px) {
+  .header {
+    margin: 0 auto; /* Untuk memastikan elemen berada di tengah */
+    padding-left: 10px; /* Menambahkan padding kiri untuk menggeser sedikit ke kiri */
+    padding-right: 10px; /* Mengatur padding kanan agar tetap seimbang */
+    width: calc(100% - 20px); /* Mengurangi lebar elemen sebesar total padding (10px kiri + 10px kanan) */
+  }
+  
+  .imageWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    height: auto;
+    margin-top: 60px;
+  }
+
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .image1 {
+    grid-column: span 2;
+    width: 100%; /* Lebar 100% dari parent */
+    height: auto; /* Otomatis menyesuaikan tinggi berdasarkan aspek rasio */
+    object-fit: cover; /* Gambar atau video mengisi container tanpa dipotong */
+  }
+
+  .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Tetap cover untuk mempertahankan proporsi */
+  }
+
+  .image2 {
+    grid-column: 1;
+    grid-row: 2;
+    top: auto;
+    right: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .image5 {
+    grid-column: 2;
+    grid-row: 2;
+    top: auto;
+    right: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .image3 {
+    grid-column: 1;
+    grid-row: 3;
+    top: auto;
+    right: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .image4 {
+    grid-column: 2;
+    grid-row: 3;
+    top: auto;
+    right: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Kecilkan tulisan pada mode mobile */
+  .textOverlay h1 {
+    font-size: 1.25em; /* Ukuran font setengah dari ukuran desktop */
+  }
+
+  .textOverlay p {
+    font-size: 0.55em; /* Ukuran font setengah dari ukuran desktop */
+  }
+
+  .textOverlayGallery h1 {
+    font-size: 1.25rem; /* Ukuran font setengah dari ukuran desktop */
+  }
+
+  .textOverlayGallery p {
+    font-size: 0.5rem; /* Ukuran font setengah dari ukuran desktop */
+  }
+
+  .textOverlayRevolution h1 {
+    font-size: 1rem; /* Ukuran font setengah dari ukuran desktop */
+  }
+
+  .textOverlayRevolution p {
+    font-size: 0.5rem; /* Ukuran font setengah dari ukuran desktop */
+  }
+}
