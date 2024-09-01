@@ -10,17 +10,8 @@ const Contact = () => {
         </div>
         <p>&copy; Copyright 2023, All Rights Reserved</p>
         <div className={styles.socialIcons}>
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-twitter"></i>
-          </a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-linkedin-in"></i>
+          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+            <img src="/icons/youtube.png" alt="YouTube" className={styles.youtubeIcon} />
           </a>
         </div>
       </div>
