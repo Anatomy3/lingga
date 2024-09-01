@@ -6,8 +6,9 @@ const Projects = () => {
   const [selectedContent, setSelectedContent] = useState('/scaff/1.png'); // Gambar default
   const [activeCardIndex, setActiveCardIndex] = useState(0);
 
+  // Mengganti URL ikon dengan jalur ikon lokal
   const model2DIcons = [
-    "https://cdn-icons-png.flaticon.com/512/906/906324.png"
+    "/icons/sketchup.png" // Ikon SketchUp dari direktori lokal
   ];
 
   const model3DIcons = [
