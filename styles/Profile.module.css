@@ -1,6 +1,6 @@
 .profileWrapper {
   position: absolute;
-  top: 360%; /* Menggeser profil lebih ke bawah, sesuaikan nilai ini jika diperlukan */
+  top: 370%; /* Menggeser profil lebih ke bawah */
   left: 200px; /* Jarak dari tepi kiri */
   transform: translateY(-50%); /* Pusatkan secara vertikal */
   z-index: 1000;
@@ -13,18 +13,21 @@
   text-align: center;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 2px solid #1c1c1c; /* Menambahkan stroke dengan warna matte black */
 }
 
 .imageContainer {
   width: 100%;
-  height: 250px;
+  height: 210px; /* Kurangi sedikit tinggi gambar */
   overflow: hidden;
+  position: relative;
 }
 
 .profileImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: translateY(-5px); /* Geser gambar sedikit ke bawah */
 }
 
 .content {
@@ -87,7 +90,7 @@
   background-color: var(--color);
 }
 
-.socialLinks > a:hover > i {
+.socialLinks > a:hover i {
   color: white;
 }
 
@@ -98,13 +101,19 @@
     top: auto;
     left: auto;
     transform: none;
-    width: 90%; /* Lebar lebih kecil untuk mobile */
+    width: 80%; /* Lebar lebih kecil untuk mobile, dari 90% menjadi 80% */
     margin: 20px auto; /* Tambahkan margin untuk memberikan ruang di sekitar profil */
     box-shadow: none; /* Hapus atau atur ulang bayangan jika diperlukan */
+    border: 1px solid #1c1c1c; /* Menambahkan stroke dengan warna matte black */
   }
 
   .imageContainer {
-    height: 200px; /* Kurangi tinggi gambar untuk layar kecil */
+    height: 170px; /* Kurangi tinggi gambar untuk layar kecil */
+  }
+
+  .profileImage {
+    object-fit: cover; /* Tetap proporsional pada layar kecil */
+    transform: translateY(0); /* Geser gambar sedikit ke bawah */
   }
 
   .profileName {
@@ -131,12 +140,17 @@
 /* Media query untuk layar yang sangat kecil (seperti ponsel kecil) */
 @media (max-width: 480px) {
   .profileWrapper {
-    width: 95%; /* Lebar profil lebih kecil untuk perangkat yang lebih kecil */
+    width: 75%; /* Lebar profil lebih kecil untuk perangkat yang lebih kecil */
     top: 80px; /* Posisi vertikal disesuaikan */
   }
 
   .imageContainer {
     height: 150px; /* Tinggi gambar profil lebih kecil */
+  }
+
+  .profileImage {
+    object-fit: cover;
+    transform: translateY(0); /* Geser gambar sedikit ke bawah */
   }
 
   .profileName {
