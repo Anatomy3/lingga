@@ -69,9 +69,35 @@
   background-color: #D3D3D3;
 }
 
-/* Media query untuk layar kecil atau mode mobile */
+/* Media Query untuk Mode Mobile */
 @media (max-width: 768px) {
   .navbar {
-    display: none; /* Menyembunyikan navbar saat mode mobile */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5961C7; /* Warna latar belakang navbar */
+    padding: 5px 0; /* Mengurangi padding atas dan bawah */
+    width: 100vw; /* Lebar penuh dari kiri ke kanan */
+    max-width: 100vw; /* Batas lebar maksimum sama dengan lebar viewport */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan */
+    position: fixed; /* Tetap di tempat saat di-scroll */
+    bottom: 0; /* Navbar berada di bawah layar */
+    left: 0; /* Mulai dari kiri layar */
+    z-index: 10000; /* Pastikan berada di atas elemen lain */
+    height: 40px; /* Mengurangi tinggi navbar */
+  }
+
+  .leftSection {
+    display: block;
+    font-size: 14px; /* Ukuran teks sedikit lebih kecil */
+    font-weight: bold;
+    color: #ffffff; /* Warna teks putih */
+    text-align: center; /* Rata tengah untuk teks */
+    line-height: 40px; /* Menjaga teks tetap berada di tengah vertikal */
+  }
+
+  .rightSection,
+  .tradeDetails {
+    display: none; /* Sembunyikan bagian kanan dan marquee */
   }
 }
