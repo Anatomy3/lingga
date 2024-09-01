@@ -70,7 +70,7 @@ const Projects1 = () => {
         <div className={styles.cardContainer}>
           <div className={`${styles.glassCard} ${styles.card1}`}>
             <h3>Next.js Framework</h3>
-            <p>Framework Next.js dengan rendering sisi server (SSR) dan static site generation (SSG) yang membuat website semakin ngebut.</p>
+            <p>Menggunakan rendering sisi server (SSR) dan static site generation (SSG) yang membuat website berjalan lancar saat sedang dijalankan.</p>
           </div>
           <div className={`${styles.glassCard} ${styles.card2}`}>
             <h3>Website Responsif</h3>
