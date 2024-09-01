@@ -39,3 +39,18 @@
     z-index: 20;
     font-size: 12px;
 }
+
+/* Untuk menyembunyikan peta pada mode mobile dan memperlebar bagian bawah */
+@media (max-width: 768px) {
+    .mapContainer {
+        display: none; /* Sembunyikan peta di mode mobile */
+    }
+
+    .contactContainer {
+        padding-bottom: 110px; /* Tambahkan padding bawah untuk memberi ruang lebih */
+    }
+
+    .footer {
+        margin-bottom: 120px; /* Tambahkan margin bawah untuk memastikan footer tidak terlalu berdekatan dengan konten sebelumnya */
+    }
+}
